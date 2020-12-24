@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="formato.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5 table">
+        <div class="card-h ">
+            <div class="card-header p-3 mb-4 bg-success text-white">
+               <h2> Agregar Información </h2>
+            </div>
+            <div class="card-body text-card">
+                 <form id="form-user" onsubmit="event.preventDefault(), addUser()">
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" class="form-control" id="marca" placeholder="Ingresar Marca">
+                    </div>
+                    <div class="form-group">
+                        <label for="modelo">Modelo</label>
+                        <input type="text" class="form-control" id="modelo" placeholder="Ingresar Modelo">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="Ingresar Color">
+                    </div>
+                    <div class="form-group">
+                        <label for="año">Año</label>
+                        <input type="text" class="form-control" id="año" placeholder="Ingresar Año">
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio</label>
+                        <input type="text" class="form-control" id="precio" placeholder="Ingresar Precio">
+                    </div>
+                    <button type="submit" class="btn btn-primary margin">Agregar</button>
+                </form>
+            </div>
+        </div>
+
+        <table class="table table-bordered border-dark  align-middle  text margin">
+            <caption>Lista de autos</caption>
+            <thead">
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th> 
+                    <th>Color</th>
+                    <th>Año</th>
+                    <th>Precio</th>
+                    <th>Opciones</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="container-autos" >
+            </tbody>
+        </table>
+    </div>
+    <script src="./autos.js"></script>
+</body>
+</html>
